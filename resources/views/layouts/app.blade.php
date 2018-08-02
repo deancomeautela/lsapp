@@ -7,9 +7,13 @@
         <link rel="stylesheet" href ="{{asset('css/app.css')}}">
         <title>{{config('app.name', 'LSAPP')}}</title> 
     </head>
+    
     <body>
-           <!-- <h1><?php echo $title; ?></h1> This allows variables to be passsed from the controller into views dynamically... wow-->
-           @include('inc.navbar')
+            @include('inc.navbar')
+           <!--  <h1> { {$title}} <h1> This allows variables to be passsed from the controller into views dynamically... wow 
+            // also broke dynamic /posts route bc it didn't have a title variable-->
+          
+           
             <div class = "container">
             @yield('content')
             </div>
