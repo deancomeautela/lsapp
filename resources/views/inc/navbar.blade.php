@@ -15,7 +15,12 @@
           <li><a href="/about">About</a></li>
           <li><a href="/services">Services</a></li>
           <li><a href="/posts">Posts</a></li>
+          
         </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="/posts/create">Create Post</a></li>
+        </ul>
+      </div>
       </div><!--/.nav-collapse -->
     </div>
   </nav>
