@@ -24,10 +24,14 @@
                 &nbsp;
             </ul>
             <ul class="nav navbar-nav">
-              <li class="/"><a href="/">Home</a></li>
+            @if (Auth::guest())
+              <li><a href="/posts">Home</a></li>
+            @else
+            <li><a href="/dashboard">Home</a></li>
+            @endif
               <li><a href="/about">About</a></li>
               <li><a href="/services">Services</a></li>
-              <li><a href="/posts">Posts</a></li>
+              {{-- <li><a href="/posts">Posts</a></li> --}}
               <li><a href="/posts/create">Create Post</a></li>
               
             </ul>
@@ -47,7 +51,7 @@
                             <li><a href="/dashboard">Dashboard</a></li>
                             <li>
                                 <a href="{{ route('logout') }}"
-                                    onclick="event.preventDefault();
+                                    onclick="event.preventDefaultauth();
                                              document.getElementById('logout-form').submit();">
                                     Logout
                                 </a>
